@@ -6,7 +6,7 @@ int binSearch(vector<int> arr, int target) {
     int str = 0, end = arr.size()-1;
 
     while(str <= end) {
-        int mid = (str + end) / 2;
+        int mid = str + ((str + end) / 2); // We are using this formula so that if there is any max_int we can resolve it.
         if (arr[mid] < target) {
             str = mid +1;
         }
